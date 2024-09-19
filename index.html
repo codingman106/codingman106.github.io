@@ -1,7 +1,42 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annoying Website</title>
+  <style>
+    /* Flashing background colors */
+    body {
+      animation: annoyingBackground 0.5s infinite;
+    }
+    @keyframes annoyingBackground {
+      0% { background-color: red; }
+      50% { background-color: yellow; }
+      100% { background-color: green; }
+    }
+    /* Slow, delayed buttons */
+    button {
+      transition: all 2s ease;
+    }
+    button:hover {
+      cursor: wait;
+    }
+  </style>
 </head>
 <body>
-  Hello World
-</body>
-</html>
+
+<h1>Welcome to the Most Annoying Website!</h1>
+<button onclick="annoy()">Click me... if you dare</button>
+
+<script>
+  // Annoying popups
+  function annoy() {
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        alert('Are you sure you want to stay here?');
+      }, i * 1000);
+    }
+  }
+
+  // Auto-playing sound
+  const audio = new Audio('https://www.example.com/annoying-sound
