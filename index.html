@@ -39,4 +39,28 @@
   }
 
   // Auto-playing sound
-  const audio = new Audio('https://www.example.com/annoying-sound
+  const audio = new Audio('https://www.example.com/annoying-sound.mp3');
+  audio.loop = true;
+  audio.play();
+
+  // Hijacking the cursor
+  document.body.addEventListener('mousemove', (e) => {
+    const annoyingDiv = document.createElement('div');
+    annoyingDiv.style.position = 'absolute';
+    annoyingDiv.style.width = '20px';
+    annoyingDiv.style.height = '20px';
+    annoyingDiv.style.backgroundColor = 'blue';
+    annoyingDiv.style.borderRadius = '50%';
+    annoyingDiv.style.left = `${e.pageX}px`;
+    annoyingDiv.style.top = `${e.pageY}px`;
+    document.body.appendChild(annoyingDiv);
+
+    setTimeout(() => {
+      document.body.removeChild(annoyingDiv);
+    }, 1000);
+  });
+
+</script>
+
+</body>
+</html>
