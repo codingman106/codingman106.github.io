@@ -31,16 +31,13 @@
 <script>
   // Annoying popups
   function annoy() {
-  const audio = new Audio('Metal20Pipes20Fall20Sound.mp3');
+  const audio = new Audio('Metal20Pipes20Falling20Sound.mp3');
   audio.loop = true;
   audio.play();
   }
 
   // Auto-playing sound
-  const audio = new Audio('Metal20Pipes20Fall20Sound.mp3');
-  audio.loop = true;
-  audio.play();
-
+  
   // Hijacking the cursor
   document.body.addEventListener('mousemove', (e) => {
     const annoyingDiv = document.createElement('div');
