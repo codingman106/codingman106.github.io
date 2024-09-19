@@ -31,11 +31,9 @@
 <script>
   // Annoying popups
   function annoy() {
-    for (let i = 0; i < 10; i++) {
-      setTimeout(() => {
-        alert('Are you sure you want to stay here?');
-      }, i * 1000);
-    }
+  const audio = new Audio('Metal20Pipes20Fall20Sound.mp3');
+  audio.loop = true;
+  audio.play();
   }
 
   // Auto-playing sound
