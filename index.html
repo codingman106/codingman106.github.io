@@ -18,9 +18,20 @@
     button {
       transition: all 2s ease;
     }
-    h1 {
-      animation: annoyingBackground 0.01s infinite;
-    }
+    @-webkit-keyframes blackWhite {  
+  0% { background-color: white; }
+  50% { background-color: white; }
+  51% { background-color: black; }
+  100% { background-color: black; }
+}
+
+.blinkdiv {
+    height: 100px;
+    background-color: black;
+    -webkit-animation-name: blackWhite;  
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 2s; 
+}   
     button:hover {
       cursor: alias;
     }
@@ -28,7 +39,7 @@
 </head>
 <body>
 
-<h1>Welcome to the Most Annoying Website!</h1>
+<h1 class="blinkdiv">Welcome to the Most Annoying Website!</h1>
 <button onclick="annoy()">Click me... if you dare</button>
 
 <script>
